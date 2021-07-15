@@ -10,3 +10,6 @@ add a seventh question prompting the user to guess the correct answer from an ar
 give the user 6 guesses
 display all the possible correct answers
 keep track of how many correct answers the user had in the seven questions and diplay them at the end
+
+## lab 4 Thursday July 15, 2021
+Driver: Kason Braley - Navigator: Spenser

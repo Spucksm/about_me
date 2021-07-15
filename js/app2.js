@@ -1,7 +1,30 @@
 "use strict";
 console.log("Hello, this is only a test");
 
+const questionArray = [
+  "Do I like fish?",
+  "Do I live in Washington?",
+  "Is my favorite color green?",
+  "Do I like soccer?",
+  "Am I decent at coding?",
+  "Guess the number from 1- 100",
+  "Can you guess one of my favorite types of Pasta?",
+];
+
+const answersArray = [
+  "no",
+  "yes",
+  "yes",
+  "yes",
+  "no",
+  "placeholder for random number answer",
+  pastaArray,
+];
+
+const acceptibleRespones = ["yes", "no", "y", "n"];
+
 const pastaArray = ["lasagna", "ravioli", "stuffed giant shells", "tortellini"];
+
 console.log("This is the Pasta Array", pastaArray);
 let guessScore = 0;
 
@@ -9,23 +32,23 @@ let userName = prompt("Welcome, my name is Spenser. What is your name?");
 console.log("This users name is " + userName);
 alert("Welcome " + userName);
 
-alert("Please answer all questions with yes or no responses.");
+alert("Please answer the following questions with yes or no responses.");
 
-function question1() {
-  let questionOne = prompt("Do I like fish?");
-  console.log(questionOne);
-  let fish = questionOne.toLowerCase();
-  if (fish === "no" || fish === "n") {
+function questions(question) {
+  let response = prompt(question);
+  // console.log(questionOne);
+  let userResponse = response.toLowerCase();
+  if (userResponse === "no" || userResponse === "n") {
     alert("Correct, I  do not like fish.");
     guessScore++;
-  } else if (fish === "yes" || fish === "y") {
+  } else if (userResponse === "yes" || userResponse === "y") {
     alert("Sorry, that is not correct. I don't like fish.");
   } else {
     alert("I didn't understand your answer.");
   }
   console.log(fish);
 }
-question1();
+questions(questionArray[0]);
 
 function question2() {
   let questionTwo = prompt("Do I live in Washington?");
@@ -105,10 +128,9 @@ function question5() {
 }
 question5();
 
-function question6() {
-  // let questionSix = parseInt(prompt('Guess the number from 1- 100'));
+function numberGuess() {
   let correctNumber = Math.floor(Math.random() * 100) + 1;
-  // console.log(correctNumber);
+  console.log(correctNumber);
   let guessAttempts = 4;
   for (let i = 0; i < guessAttempts; i++) {
     let questionSix = parseInt(prompt("Guess the number from 1- 100"));
@@ -136,9 +158,9 @@ function question6() {
     }
   }
 }
-question6();
+numberGuess();
 
-function question7() {
+function favoritePasta() {
   alert("This is not a yes or no question.");
   // let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
   // let pasta = pastaGuess.toLowerCase();
@@ -177,6 +199,7 @@ function question7() {
     i++;
   }
 }
+favoritePasta();
 
 alert(
   userName +
