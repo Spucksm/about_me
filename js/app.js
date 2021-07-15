@@ -77,11 +77,12 @@ if (coding === 'no' || coding === 'n') {
 }
 
 console.log(coding);
-let questionSix = parseInt(prompt('Guess the number from 1- 100'));
+// let questionSix = parseInt(prompt('Guess the number from 1- 100'));
 let correctNumber = Math.floor(Math.random() * 100) +1;
-console.log(correctNumber);
+// console.log(correctNumber);
 let guessAttempts = 4;
 for (let i = 0; i < guessAttempts; i++) {
+    let questionSix = parseInt(prompt('Guess the number from 1- 100'));
     while(questionSix < 1 || questionSix > 100) {
         questionSix = parseInt(prompt('Wrong range. Please enter a number 1- 100'));
     }
@@ -100,7 +101,6 @@ for (let i = 0; i < guessAttempts; i++) {
     if (i === guessAttempts -1) {
         alert('You did not guess correctly. The correct answer is ' + correctNumber);
     }
-    questionSix = parseInt(prompt('Guess the number from 1- 100'));
 }
 alert('This is not a yes or no question.');
 // let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
