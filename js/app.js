@@ -77,9 +77,9 @@ if (coding === 'no' || coding === 'n') {
 }
 
 console.log(coding);
-// let questionSix = parseInt(prompt('Guess the number from 1- 100'));
+let questionSix = parseInt(prompt('Guess the number from 1- 100'));
 let correctNumber = Math.floor(Math.random() * 100) +1;
-// console.log(correctNumber);
+console.log(correctNumber);
 let guessAttempts = 4;
 for (let i = 0; i < guessAttempts; i++) {
     let questionSix = parseInt(prompt('Guess the number from 1- 100'));
@@ -103,35 +103,35 @@ for (let i = 0; i < guessAttempts; i++) {
     }
 }
 alert('This is not a yes or no question.');
-// let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
-// let pasta = pastaGuess.toLowerCase();
+let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
+let pasta = pastaGuess.toLowerCase();
 let correctAnswer = false;
 let guesses = 6;
 let guessAmount = 5;
 let i = 0;
-// for (let i = 0; i < guessAmount; i++) {
-while(i < guessAmount) {
-    let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
-    console.log(userName + ' guessed that one of my favorite pasta dishes is ', pastaGuess);
-    for (let j = 0; j < pastaArray.length; j++){
-        if (pastaGuess === pastaArray[j]) {
-            alert('Nice! you guessed correctly! I really like ' + pastaGuess + '. Its one of my favorites!');
-            correctAnswer = true;
-            guessScore++;
-            i += 6;
-            break;
+for (let i = 0; i < guessAmount; i++) {
+    while(i < guessAmount) {
+        let pastaGuess = prompt('Can you guess one of my favorite types of Pasta?');
+        console.log(userName + ' guessed that one of my favorite pasta dishes is ', pastaGuess);
+        for (let j = 0; j < pastaArray.length; j++){
+            if (pastaGuess === pastaArray[j]) {
+                alert('Nice! you guessed correctly! I really like ' + pastaGuess + '. Its one of my favorites!');
+                correctAnswer = true;
+                guessScore++;
+                i += 6;
+                break;
+            }
         }
+        if ( correctAnswer === false && guesses > 0){
+            alert ('Sorry, that is not one of my favorite pasta dishes. Guess again.');
+        }
+        guesses--;
+        console.log('This is user guess ' + (6 - guesses));
+        if (i === guessAmount && !correctAnswer) {
+            alert('Sorry you got it wrong, correct answers were: ' + pastaArray);
+        }
+        i++;
     }
-    if ( correctAnswer === false && guesses > 0){
-        alert ('Sorry, that is not one of my favorite pasta dishes. Guess again.');
-    }
-    guesses--;
-    console.log('This is user guess ' + (6 - guesses));
-    if (i === guessAmount && !correctAnswer) {
-        alert('Sorry you got it wrong, correct answers were: ' + pastaArray);
-    }
-    i++;
 }
-
 
 alert (userName + ', thank you for taking my quiz. My name is Spenser, I don\'t like fish, even though I live in Washington, my favorite color is green, my favorite sport is soccer, go Sounders! Lastly, I don\'t think I am very good at coding yet. I know I still have a lot to learn. You answered ' + guessScore + ' questions correctly.');

@@ -1,0 +1,61 @@
+body {
+    background-color: gray;
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+}
+
+.one {
+    padding: 30px;
+}
+
+header{
+    border: 10px solid blue;
+    border-radius: 10px;
+    margin: auto;
+    padding: 5px;
+    max-width: 50%;
+
+}
+
+.row {
+    border: 3px solid blue;
+    padding: 20px;
+    border: 2px solid red;
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.column {
+    width: auto;
+    flex: 50%;
+}
+
+h1 {
+    font-size: 3em;
+    color: green;
+    
+}
+section {
+    max-width: 50%;
+    margin: auto;
+}
+
+ol {
+    list-style: decimal;
+    list-style-position: inside;
+    display: inline-block;
+    text-align: left;
+}
+ul {
+    list-style-position: inside;
+    display: inline-block;
+    text-align: left;
+}
+
+.three>div {
+    padding: 30px;
+}
